@@ -11,33 +11,33 @@
   --card-foreground: oklch(0.15 0.01 240);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.15 0.01 240);
-  --primary: oklch(0.55 0.2 230);
+  --primary: oklch(0.50 0.15 230);
   --primary-foreground: oklch(1 0 0);
   --secondary: oklch(0.96 0.01 240);
   --secondary-foreground: oklch(0.2 0.01 240);
   --muted: oklch(0.95 0.01 240);
   --muted-foreground: oklch(0.5 0.02 240);
-  --accent: oklch(0.7 0.15 180);
+  --accent: oklch(0.65 0.12 180);
   --accent-foreground: oklch(0.15 0.01 240);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
   --border: oklch(0.9 0.01 240);
   --input: oklch(0.92 0.01 240);
-  --ring: oklch(0.55 0.2 230);
-  --chart-1: oklch(0.55 0.2 230);
-  --chart-2: oklch(0.65 0.15 180);
-  --chart-3: oklch(0.6 0.18 200);
-  --chart-4: oklch(0.7 0.12 190);
-  --chart-5: oklch(0.5 0.22 220);
+  --ring: oklch(0.50 0.15 230);
+  --chart-1: oklch(0.50 0.15 230);
+  --chart-2: oklch(0.65 0.12 180);
+  --chart-3: oklch(0.55 0.14 200);
+  --chart-4: oklch(0.65 0.10 190);
+  --chart-5: oklch(0.45 0.18 220);
   --radius: 1rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.55 0.2 230);
+  --sidebar-primary: oklch(0.50 0.15 230);
   --sidebar-primary-foreground: oklch(0.985 0 0);
   --sidebar-accent: oklch(0.97 0 0);
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.55 0.2 230);
+  --sidebar-ring: oklch(0.50 0.15 230);
 }
 
 .dark {
@@ -186,30 +186,47 @@
 .glass-header {
   background: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0.7) 0%,
-    rgba(255, 255, 255, 0.5) 100%
-  );
-  backdrop-filter: blur(80px) saturate(200%);
-  -webkit-backdrop-filter: blur(80px) saturate(200%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(255, 255, 255, 0.9) 100%
+  ) !important;
+  backdrop-filter: blur(20px) saturate(200%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(200%) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
 }
 
 .dark .glass-header {
   background: linear-gradient(
     180deg,
-    rgba(15, 23, 42, 0.85) 0%,
-    rgba(15, 23, 42, 0.7) 100%
-  );
-  backdrop-filter: blur(80px) saturate(180%);
-  -webkit-backdrop-filter: blur(80px) saturate(180%);
+    rgba(15, 23, 42, 0.95) 0%,
+    rgba(15, 23, 42, 0.9) 100%
+  ) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
+/* Fallback для браузеров без backdrop-filter */
+@supports not (backdrop-filter: blur(20px)) {
+  .glass-header {
+    background: rgba(255, 255, 255, 0.98) !important;
+  }
+  
+  .dark .glass-header {
+    background: rgba(15, 23, 42, 0.98) !important;
+  }
+}
+
+/* Light mode gradient backgrounds - softer */
+:root .absolute:not(.dark *) {
+  --tw-gradient-from-opacity: 0.15;
+  --tw-gradient-to-opacity: 0.15;
+}
+
 /* Gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, oklch(0.55 0.2 230), oklch(0.65 0.18 180));
+  background: linear-gradient(135deg, oklch(0.50 0.15 230), oklch(0.60 0.12 180));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

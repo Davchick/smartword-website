@@ -4,7 +4,7 @@ import { Analytics } from '@vercel/analytics/next'
 import { ThemeProvider } from '@/components/theme-provider'
 import './globals.css'
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ["latin", "cyrillic"],
   variable: '--font-inter'
 });
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#f8fafc' },
+    { media: '(prefers-color-scheme: light)', color: '#14b8a6' },
     { media: '(prefers-color-scheme: dark)', color: '#0f172a' },
   ],
   width: 'device-width',
@@ -50,7 +50,7 @@ export default function RootLayout({
         >
           {children}
         </ThemeProvider>
-        <Analytics />
+        <Analytics debug={false} />
       </body>
     </html>
   )

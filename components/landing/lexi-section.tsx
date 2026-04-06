@@ -93,12 +93,12 @@ export function LexiSection() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 + index * 0.1 }}
-                  className="flex items-start gap-4 glass rounded-2xl p-4"
+                  className="flex items-center gap-4 glass rounded-2xl p-4"
                 >
                   <div className="flex-shrink-0 h-10 w-10 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center">
                     <item.icon className="h-5 w-5 text-white" />
                   </div>
-                  <div>
+                  <div className="flex-1">
                     <h3 className="font-semibold mb-1">{item.title}</h3>
                     <p className="text-sm text-muted-foreground">{item.description}</p>
                   </div>

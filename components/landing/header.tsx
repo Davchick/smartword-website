@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/theme-toggle"
+import Image from "next/image"
 
 const navLinks = [
   { href: "#features", label: "Возможности" },
@@ -22,6 +23,7 @@ export function Header() {
       setIsScrolled(window.scrollY > 20)
     }
     window.addEventListener("scroll", handleScroll)
+    handleScroll() // Проверить сразу при загрузке
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
@@ -38,9 +40,13 @@ export function Header() {
         <nav className="flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2.5 group">
-            <div className="relative h-10 w-10 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg shadow-primary/25 group-hover:shadow-primary/40 transition-shadow">
-              <span className="text-lg font-bold text-white">S</span>
-              <div className="absolute inset-0 rounded-xl bg-white/20 blur-sm" />
+            <div className="relative h-10 w-10 rounded-full overflow-hidden shadow-lg shadow-primary/25 group-hover:shadow-primary/40 transition-shadow">
+              <Image
+                src="/logo.png"
+                alt="SmartWord"
+                fill
+                className="object-cover"
+              />
             </div>
             <span className="text-xl font-semibold tracking-tight">SmartWord</span>
           </a>

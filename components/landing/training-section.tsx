@@ -22,8 +22,8 @@ const trainingModes = [
   },
   {
     icon: RefreshCw,
-    title: "Интервальное повторение",
-    description: "Умный алгоритм планирует повторения в оптимальные моменты для долгосрочного запоминания.",
+    title: "Техника интервального повторения",
+    description: "Алгоритмы отслеживают, на какие слова нужно сделать больший упор для долгосрочного запоминания.",
     color: "text-teal-500",
     bg: "bg-teal-500/10",
   },
@@ -42,18 +42,17 @@ export function TrainingSection() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="inline-block text-sm font-medium text-primary mb-4">Режимы тренировок</span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-balance">
             Разные способы{" "}
             <span className="gradient-text">запомнить слова</span>
           </h2>
           <p className="mt-6 text-lg text-muted-foreground text-pretty">
-            Все учатся по-разному. Выбирай режимы тренировок под свой стиль 
-            и наблюдай, как твой словарный запас растёт экспоненциально.
+            Все учатся по-разному. Выбирай режимы тренировок под свой стиль
+            и отслеживай прогресс своего словарного запаса.
           </p>
         </motion.div>
 
@@ -62,7 +61,7 @@ export function TrainingSection() {
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
@@ -71,15 +70,15 @@ export function TrainingSection() {
                 key={mode.title}
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ delay: 0.2 + index * 0.1 }}
                 className="group relative glass rounded-3xl p-6 transition-all duration-300 hover:scale-[1.02]"
               >
-                <div className="flex items-start gap-5">
+                <div className="flex items-center gap-5">
                   <div className={`flex-shrink-0 h-14 w-14 rounded-2xl ${mode.bg} flex items-center justify-center`}>
                     <mode.icon className={`h-7 w-7 ${mode.color}`} />
                   </div>
-                  <div>
+                  <div className="flex-1">
                     <h3 className="text-xl font-semibold mb-2">{mode.title}</h3>
                     <p className="text-muted-foreground leading-relaxed">{mode.description}</p>
                   </div>

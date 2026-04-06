@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
+import { useCountUp } from "@/hooks/use-count-up"
 
 const weekData = [
   { day: "Пн", words: 12, reviewed: 45 },
@@ -22,7 +23,13 @@ const progressPoints = weekData.map((_, i) => {
 
 export function ProgressCurve() {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const isInView = useInView(ref, { once: false, margin: "-100px" })
+
+  // Animated counters — only run when in view
+  const newWords = useCountUp({ end: 123, isActive: isInView, prefix: "+" })
+  const reviewed = useCountUp({ end: 434, isActive: isInView })
+  const accuracy = useCountUp({ end: 87, isActive: isInView, suffix: "%" })
+  const streakDays = useCountUp({ end: 7, isActive: isInView })
 
   // SVG path for smooth curve
   const width = 320
@@ -76,7 +83,7 @@ export function ProgressCurve() {
           <p className="text-sm text-muted-foreground">Кривая обучения</p>
         </div>
         <div className="text-right">
-          <p className="text-2xl font-bold gradient-text">+123</p>
+          <p className="text-2xl font-bold gradient-text">{newWords}</p>
           <p className="text-xs text-muted-foreground">новых слов</p>
         </div>
       </div>
@@ -201,15 +208,15 @@ export function ProgressCurve() {
         className="grid grid-cols-3 gap-4 mt-6 pt-4 border-t border-border/50"
       >
         <div className="text-center">
-          <p className="text-lg font-bold">434</p>
+          <p className="text-lg font-bold">{reviewed}</p>
           <p className="text-xs text-muted-foreground">повторений</p>
         </div>
         <div className="text-center">
-          <p className="text-lg font-bold gradient-text">87%</p>
+          <p className="text-lg font-bold gradient-text">{accuracy}</p>
           <p className="text-xs text-muted-foreground">точность</p>
         </div>
         <div className="text-center">
-          <p className="text-lg font-bold">7</p>
+          <p className="text-lg font-bold">{streakDays}</p>
           <p className="text-xs text-muted-foreground">дней подряд</p>
         </div>
       </motion.div>

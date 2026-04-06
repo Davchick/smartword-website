@@ -24,8 +24,8 @@ const features = [
   },
   {
     icon: Brain,
-    title: "Интервальное повторение",
-    description: "Наш алгоритм знает, когда ты вот-вот забудешь слово. Повторяй в идеальный момент для долгосрочного запоминания.",
+    title: "Техника интервального повторения",
+    description: "Алгоритмы отслеживают, на какие слова нужно сделать больший упор для долгосрочного запоминания.",
     gradient: "from-emerald-500 to-cyan-500",
   },
 ]
@@ -70,13 +70,12 @@ export function Features() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="inline-block text-sm font-medium text-primary mb-4">Почему SmartWord?</span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-balance">
             Всё, что нужно для{" "}
             <span className="gradient-text">освоения языка</span>
           </h2>
           <p className="mt-6 text-lg text-muted-foreground text-pretty">
-            Забудь о скучных карточках. SmartWord объединяет твой личный словарь 
+            SmartWord объединяет твой личный словарь
             с ИИ-практикой для обучения, которое действительно работает.
           </p>
         </motion.div>
