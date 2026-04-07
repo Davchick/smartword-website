@@ -30,7 +30,7 @@ export default function PrivacyPage() {
       </div>
 
       {/* Content */}
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12">
+      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -41,88 +41,47 @@ export default function PrivacyPage() {
           <Section
             title="1. Оператор персональных данных"
             content={
-              <>
-                <p>
-                  Оператором является индивидуальный предприниматель{" "}
-                  <strong>ИП Сейитмаммедов Давут Гелдимырадович </strong>
-                  (ИНН 236600208052, ОГРНИП 326237500121501).
-                </p>
-                <p className="mt-2">
-                  Обработка осуществляется в соответствии с Федеральным законом
-                  от 27.07.2006 № 152-ФЗ «О персональных данных».
-                </p>
-              </>
+              <p>
+                Оператором является индивидуальный предприниматель{" "}
+                <strong>ИП Сейитмаммедов Давут Гелдимырадович </strong>
+                (ИНН 236600208052, ОГРНИП 326237500121501).
+              </p>
             }
           />
 
           {/* 2. Какие данные собираем */}
           <Section
-            title="2. Какие данные мы обрабатываем"
+            title="2. Какие персональные данные мы обрабатываем?"
             content={
-              <ul className="space-y-2">
-                <DataItem
-                  title="Учётные данные"
-                  items={["Email", "Хеш пароля", "Дата создания аккаунта"]}
-                />
-                <DataItem
-                  title="Google"
-                  items={["Google ID", "Email", "Имя", "Аватар"]}
-                />
-                <DataItem
-                  title="Данные об обучении"
-                  items={["Словари и слова", "Прогресс", "Статистика"]}
-                />
-                <DataItem
-                  title="ИИ-функции"
-                  items={["Запросы к ИИ", "Контекст диалога"]}
-                />
-                <DataItem
-                  title="Платежи"
-                  items={["Статус подписки", "История покупок"]}
-                />
-                <DataItem
-                  title="Технические данные"
-                  items={["IP-адрес", "Устройство", "Журналы событий"]}
-                />
-              </ul>
+              <p className="text-sm">
+                Мы обрабатываем только ваш <strong>адрес электронной почты (Email)</strong>,
+                указанный при регистрации.
+              </p>
             }
           />
 
           {/* 3. Цели */}
           <Section
-            title="3. Для чего мы обрабатываем данные"
+            title="3. Для чего мы обрабатываем персональные данные?"
             content={
-              <ul className="list-disc pl-5 space-y-1">
-                <li>Регистрация, вход, восстановление доступа</li>
-                <li>
-                  Оказание услуг приложения (словари, тренировки, статистика)
-                </li>
-                <li>Работа ИИ-функций (чат, перевод, подсказки)</li>
-                <li>Обработка платежей Premium-подписки</li>
-                <li>Ответы на ваши запросы</li>
-              </ul>
+              <p className="text-sm">
+                Email используется исключительно для <strong>регистрации</strong> вашего аккаунта и <strong>входа</strong> в приложение.
+              </p>
             }
           />
 
           {/* 4. Передача третьим лицам */}
           <Section
-            title="4. ⚠️ Передача данных третьим лицам"
+            title="4. Передача данных третьим лицам"
             content={
-              <>
-                <div className="bg-amber-500/10 border border-amber-500/20 rounded-lg p-4 mb-4">
-                  <p className="text-sm">
-                    <strong>Трансграничная передача:</strong> Для работы AI-чата
-                    ваши запросы передаются провайдеру{" "}
-                    <strong>OpenRouter (США)</strong>. Вы даёте согласие на
-                    трансграничную передачу данных при регистрации.
-                  </p>
-                </div>
+              <div className="bg-amber-500/10 border border-amber-500/20 rounded-lg p-4">
                 <p className="text-sm">
-                  Также данные передаются: <strong>ЮKassa</strong> (платежи),{" "}
-                  <strong>Google</strong> (OAuth),{" "}
-                  <strong>Хостинг-провайдеру</strong> (хранение данных в РФ).
+                  <strong>Трансграничная передача:</strong> Для работы AI-чата
+                  ваши запросы передаются провайдеру{" "}
+                  <strong>OpenRouter</strong>. Вы даёте согласие на
+                  трансграничную передачу данных при регистрации.
                 </p>
-              </>
+              </div>
             }
           />
 
@@ -154,47 +113,11 @@ export default function PrivacyPage() {
             }
           />
 
-          {/* 7. Контакты оператора */}
-          <Section
-            title="7. Контакты оператора"
-            content={
-              <ContactItem
-                icon={Mail}
-                label="Email для запросов"
-                value="support@smart-word.ru"
-                href={`mailto:support@smart-word.ru`}
-              />
-            }
-          />
-
-          {/* 8. Реквизиты */}
-          <Section
-            title="8. Реквизиты ИП"
-            content={
-              <div className="bg-card border border-border rounded-lg p-4 text-sm space-y-2">
-                <div className="flex justify-between">
-                  <span className="text-muted-foreground">ФИО</span>
-                  <span className="font-medium">
-                    Сейитмаммедов Давут Гелдимырадович
-                  </span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-muted-foreground">ИНН</span>
-                  <span className="font-medium">236600208052</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-muted-foreground">ОГРНИП</span>
-                  <span className="font-medium">326237500121501</span>
-                </div>
-              </div>
-            }
-          />
-
           {/* Footer */}
           <div className="pt-8 border-t border-border/50 text-center text-sm text-muted-foreground">
             <p>
-              Документ составлен в соответствии с Федеральным законом № 152-ФЗ
-              «О персональных данных»
+              Обработка осуществляется в соответствии с Федеральным законом
+              от 27.07.2006 № 152-ФЗ «О персональных данных».
             </p>
           </div>
         </motion.div>

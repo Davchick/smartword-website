@@ -19,7 +19,7 @@ export default function TermsPage() {
               <Scale className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />
             </div>
             <h1 className="text-2xl sm:text-4xl font-bold mb-3 sm:mb-4">
-              Пользовательское соглашение
+              Условия использования
             </h1>
             <p className="text-sm sm:text-lg text-muted-foreground max-w-2xl mx-auto">
               Публичная оферта на оказание услуг мобильного приложения «SmartWord»
