@@ -83,7 +83,6 @@ export default function TermsPage() {
                     <li>• <strong>Все словари без ограничений</strong> — создавайте сколько угодно тематических подборок слов и фраз</li>
                     <li>• <strong>Неограниченное количество слов</strong> — добавляйте новые слова без лимитов</li>
                     <li>• <strong>Безлимитный AI-чат с Лекси</strong> — практикуйте язык в живом диалоге без счётчика сообщений</li>
-                    <li>• <strong>Расширенная статистика</strong> — детальный прогресс обучения и аналитика</li>
                     <li>• <strong>Приоритетная поддержка</strong> — ответы на запросы в приоритетном порядке</li>
                   </ul>
                 </div>
@@ -121,7 +120,7 @@ export default function TermsPage() {
                 </ul>
                 
                 <p className="text-sm mb-3">
-                  <strong>Обработка платежей:</strong> ЮKassa (ИНН 7750005725)
+                  <strong>Обработка платежей:</strong> ЮKassa
                 </p>
 
                 <div className="bg-amber-500/10 border border-amber-500/20 rounded-lg p-4 mb-4">
@@ -149,7 +148,7 @@ export default function TermsPage() {
 
           {/* 5. ИИ-функции */}
           <Section
-            title="5. ⚠️ ИИ-функции"
+            title="5. ИИ-функции"
             content={
               <>
                 <div className="bg-amber-500/10 border border-amber-500/20 rounded-lg p-4 mb-4">
@@ -160,7 +159,7 @@ export default function TermsPage() {
                   </p>
                 </div>
                 <p className="text-sm">
-                  Для работы AI-чата ваши запросы передаются провайдеру <strong>OpenRouter (США)</strong>.
+                  Для работы AI-чата ваши запросы передаются провайдеру <strong>Qwen (Китай)</strong>.
                   Вы даёте согласие на трансграничную передачу данных при регистрации.
                 </p>
               </>
@@ -242,9 +241,7 @@ export default function TermsPage() {
           />
 
           {/* Footer */}
-          <div className="pt-8 border-t border-border/50 text-center text-sm text-muted-foreground">
-            <p>Оферта составлена в соответствии с ГК РФ и 2300-1 ФЗ «О защите прав потребителей»</p>
-          </div>
+          <div className="pt-8 border-t border-border/50 text-center text-sm text-muted-foreground" />
         </motion.div>
       </div>
     </main>

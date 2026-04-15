@@ -30,12 +30,10 @@ export function DownloadSection() {
     <section id="download" className="relative py-24 lg:py-32 overflow-hidden">
       {/* Background Image */}
       <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-full max-w-7xl h-[450px] -z-10 overflow-hidden">
-        <Image
+        <img
           src="/bg-website.webp"
           alt=""
-          fill
-          priority
-          className="object-cover"
+          className="absolute inset-0 w-full h-full object-cover"
           aria-hidden
         />
         <div className="absolute inset-0 bg-gradient-to-t from-primary/10 via-transparent to-transparent" />

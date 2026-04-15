@@ -1,7 +1,6 @@
 "use client"
 
 import { motion } from "framer-motion"
-import Image from "next/image"
 
 const footerLinks = {
   "Продукт": [
@@ -36,11 +35,10 @@ export function Footer() {
               className="flex items-center gap-2.5 mb-4"
             >
               <div className="relative h-10 w-10 rounded-full overflow-hidden shadow-lg">
-                <Image
+                <img
                   src="/logo.png"
                   alt="SmartWord"
-                  fill
-                  className="object-cover"
+                  className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
               <span className="text-xl font-semibold">SmartWord</span>

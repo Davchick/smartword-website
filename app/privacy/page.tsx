@@ -78,7 +78,7 @@ export default function PrivacyPage() {
                 <p className="text-sm">
                   <strong>Трансграничная передача:</strong> Для работы AI-чата
                   ваши запросы передаются провайдеру{" "}
-                  <strong>OpenRouter</strong>. Вы даёте согласие на
+                  <strong>Qwen (Китай)</strong>. Вы даёте согласие на
                   трансграничную передачу данных при регистрации.
                 </p>
               </div>

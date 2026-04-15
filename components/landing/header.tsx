@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/theme-toggle"
-import Image from "next/image"
 
 const navLinks = [
   { href: "#features", label: "Возможности" },
@@ -41,11 +40,10 @@ export function Header() {
           {/* Logo */}
           <a href="#" className="flex items-center gap-2.5 group">
             <div className="relative h-10 w-10 rounded-full overflow-hidden shadow-lg shadow-primary/25 group-hover:shadow-primary/40 transition-shadow">
-              <Image
+              <img
                 src="/logo.png"
                 alt="SmartWord"
-                fill
-                className="object-cover"
+                className="absolute inset-0 w-full h-full object-cover"
               />
             </div>
             <span className="text-xl font-semibold tracking-tight">SmartWord</span>
