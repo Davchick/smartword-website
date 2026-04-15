@@ -79,8 +79,8 @@ export function DownloadSection() {
                       alt={store.name}
                       width={48}
                       height={48}
-                      className="w-12 h-12"
-                      style={{ filter: "brightness(0) invert(1)" }}
+                      className="w-9 h-9"
+                      style={{ filter: "invert(1)" }}
                     />
                     <div className="text-left">
                       <p className="text-xs text-white">{store.subtitle}</p>

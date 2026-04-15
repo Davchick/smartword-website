@@ -94,7 +94,7 @@ export function Header() {
               transition={{ duration: 0.3 }}
               className="md:hidden overflow-hidden"
             >
-              <div className="py-4 flex flex-col gap-1">
+              <div className="py-4 flex flex-col gap-1 bg-background rounded-2xl mt-2 border border-border/50">
                 {navLinks.map((link) => (
                   <a
                     key={link.href}
@@ -107,7 +107,7 @@ export function Header() {
                 ))}
                 <Button
                   asChild
-                  className="mt-3 rounded-full bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity text-white border-0"
+                  className="mt-3 mx-4 rounded-full bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity text-white border-0"
                 >
                   <a href="#download" onClick={() => setIsMobileMenuOpen(false)}>
                     Скачать приложение
