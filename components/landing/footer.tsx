@@ -16,6 +16,7 @@ const footerLinks = {
   "Документы": [
     { label: "Политика конфиденциальности", href: "/privacy" },
     { label: "Условия использования", href: "/terms" },
+    { label: "Согласие на обработку ПДн", href: "/consent" },
   ],
 }
 
@@ -122,6 +123,12 @@ export function Footer() {
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Условия использования
+                </a>
+                <a
+                  href="/consent"
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Согласие на обработку ПДн
                 </a>
               </div>
               <span className="hidden sm:inline text-muted-foreground">•</span>

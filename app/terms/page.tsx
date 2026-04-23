@@ -7,7 +7,7 @@ export default function TermsPage() {
   return (
     <main className="relative min-h-screen overflow-x-hidden">
       {/* Header */}
-      <div className="relative bg-gradient-to-b from-primary/5 to-transparent border-b border-border/50">
+      <div className="relative bg-linear-to-b from-primary/5 to-transparent border-b border-border/50">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -19,11 +19,12 @@ export default function TermsPage() {
               <Scale className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />
             </div>
             <h1 className="text-2xl sm:text-4xl font-bold mb-3 sm:mb-4">
-              Условия использования
+              Условия использования (Публичная оферта)
             </h1>
             <p className="text-sm sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-              Публичная оферта на оказание услуг мобильного приложения «SmartWord»
+              Мобильное приложение «SmartWord»
             </p>
+            <p className="text-xs sm:text-sm text-muted-foreground mt-2">Версия 1.0</p>
           </motion.div>
         </div>
       </div>
@@ -42,28 +43,68 @@ export default function TermsPage() {
             content={
               <>
                 <p className="text-sm">
-                  Настоящая Оферта является публичным предложением ИП Сейитмаммедов Давут Гелдимырадович 
-                  (ИНН 236600208052, ОГРНИП 326237500121501) заключить договор возмездного оказания услуг.
+                  1.1. Настоящий документ является официальной публичной офертой Индивидуального
+                  предпринимателя ИП Сейитмаммедов Давут Гелдимырадович (далее — «Исполнитель»,
+                  ИНН 236600208052, ОГРНИП 326237500121501), адрес электронной почты:
+                  {" "}
+                  <a href="mailto:support@smart-word.ru" className="text-primary hover:underline">
+                    support@smart-word.ru
+                  </a>
+                  , и содержит все существенные условия договора возмездного оказания услуг с
+                  использованием мобильного приложения «SmartWord» (далее — «Приложение»).
                 </p>
-                <p className="text-sm mt-2">
-                  Договор заключается путём акцепта — нажатия кнопки «Принять» или фактического 
-                  использования приложения. Акцепт означает полное согласие со всеми условиями.
+                <p className="text-sm mt-3">
+                  1.2. Акцепт (полное и безоговорочное принятие) условий настоящей Оферты
+                  осуществляется Пользователем одним из следующих способов:
+                </p>
+                <ul className="text-sm space-y-1 mt-2">
+                  <li>
+                    1.2.1. Проставление символа (галочки) в специальном поле («чекбоксе») рядом
+                    с текстом «Принимаю политику конфиденциальности и условия использования» в
+                    форме регистрации или авторизации в Приложении с последующим успешным
+                    завершением процедуры создания учетной записи.
+                  </li>
+                  <li>
+                    1.2.2. Фактическое начало использования любого функционала Приложения (в том
+                    числе просмотр словарей или использование AI-чата) при условии, что Пользователь
+                    ранее не осуществил явный отказ от принятия Оферты.
+                  </li>
+                </ul>
+                <p className="text-sm mt-3">
+                  1.3. Акцептуя Оферту указанными способами, Пользователь подтверждает, что он
+                  ознакомлен, согласен и принимает все условия в полном объеме, а также предоставляет
+                  необходимые согласия на обработку данных согласно{" "}
+                  <a href="/privacy" className="text-primary hover:underline">
+                    Политике конфиденциальности
+                  </a>
+                  .
                 </p>
               </>
             }
           />
 
-          {/* 2. Услуги */}
+          {/* 2. Предмет договора и услуги */}
           <Section
-            title="2. Услуги"
+            title="2. Предмет договора и услуги"
             content={
-              <ul className="space-y-1 text-sm">
-                <li>• Управление словарями и словами</li>
-                <li>• Тренировки (карточки, режим письма)</li>
-                <li>• AI-чат для общения на изучаемом языке</li>
-                <li>• Перевод текста</li>
-                <li>• Статистика обучения</li>
-              </ul>
+              <>
+                <p className="text-sm">
+                  2.1. Исполнитель предоставляет Пользователю право использования Приложения на
+                  условиях простой (неисключительной) лицензии, а также оказывает сопутствующие
+                  услуги, включая:
+                </p>
+                <ul className="space-y-1 text-sm mt-2">
+                  <li>• Управление личными словарями и лексическими единицами;</li>
+                  <li>• Доступ к тренировочным режимам (флеш-карточки, письменные упражнения);</li>
+                  <li>• Доступ к функциям искусственного интеллекта (AI-чат для языковой практики, перевод текста);</li>
+                  <li>• Сбор и отображение статистики обучения.</li>
+                </ul>
+                <p className="text-sm mt-3">
+                  2.2. Базовый функционал Приложения предоставляется бесплатно. Расширенный
+                  функционал доступен на условиях платной подписки «Premium» согласно разделу 3
+                  настоящей Оферты.
+                </p>
+              </>
             }
           />
 
@@ -73,95 +114,92 @@ export default function TermsPage() {
             content={
               <>
                 <p className="text-sm mb-3">
-                  <strong>Premium-подписка</strong> — платная услуга, предоставляющая расширенный
-                  функционал приложения SmartWord.
+                  3.1. Premium-подписка — платная услуга, расширяющая стандартный функционал
+                  Приложения.
                 </p>
                 
-                <div className="bg-card border border-border rounded-lg p-4 mb-4">
-                  <p className="font-medium text-sm mb-2">Premium включает:</p>
+                <div className="mb-4">
+                  <p className="font-medium text-sm mb-2">3.2. Состав Premium-доступа:</p>
                   <ul className="text-sm space-y-1">
-                    <li>• <strong>Все словари без ограничений</strong> — создавайте сколько угодно тематических подборок слов и фраз</li>
-                    <li>• <strong>Неограниченное количество слов</strong> — добавляйте новые слова без лимитов</li>
-                    <li>• <strong>Безлимитный AI-чат с Лекси</strong> — практикуйте язык в живом диалоге без счётчика сообщений</li>
-                    <li>• <strong>Приоритетная поддержка</strong> — ответы на запросы в приоритетном порядке</li>
+                    <li>• Снятие ограничений на количество словарей и слов, установленных в базовой версии Приложения.</li>
+                    <li>• Снятие ограничений на количество сообщений в AI-чате с ассистентом «Лекси» с правом применения антифлуд-мер.</li>
+                    <li>• Приоритетный порядок обработки обращений в службу поддержки.</li>
                   </ul>
                 </div>
 
-                <div className="bg-card border border-border rounded-lg p-4 mb-4">
-                  <p className="font-medium text-sm mb-2">Тарифные планы:</p>
+                <div className="mb-4">
+                  <p className="font-medium text-sm mb-2">3.3. Тарифные планы и стоимость:</p>
                   <ul className="text-sm space-y-1">
-                    <li>• <strong>Месяц</strong> — 299 ₽ (30 дней полного доступа)</li>
-                    <li>• <strong>Полгода</strong> — 1 699 ₽ (6 месяцев, выгоднее помесячной оплаты)</li>
-                    <li>• <strong>Год</strong> — 3 169 ₽ (365 дней, лучшая цена)</li>
+                    <li>• 1 месяц: 299 рублей;</li>
+                    <li>• 6 месяцев: 1 699 рублей;</li>
+                    <li>• 12 месяцев: 3 169 рублей.</li>
                   </ul>
                 </div>
 
                 <p className="text-sm">
-                  <strong>Важно:</strong> Premium-функции активируются сразу после подтверждения оплаты.
-                  Доступ к функциям сохраняется в течение всего оплаченного периода.
+                  3.4. Доступ к Premium-функциям активируется автоматически при успешном
+                  подтверждении оплаты и действует в течение оплаченного периода.
                 </p>
               </>
             }
           />
 
-          {/* 4. Оплата и возврат */}
+          {/* 4. Порядок оплаты и возврат средств */}
           <Section
-            title="4. Оплата и возврат"
+            title="4. Порядок оплаты и возврат средств"
             content={
               <>
                 <p className="text-sm mb-3">
-                  <strong>Способы оплаты:</strong>
+                  <strong>4.1. Способы оплаты:</strong> Платежи принимаются через сервис ЮKassa с
+                  использованием:
                 </p>
                 <ul className="text-sm space-y-1 mb-3">
-                  <li>• Банковские карты российских банков: Visa, Mastercard, МИР</li>
-                  <li>• СБП (Система быстрых платежей)</li>
-                  <li>• СберPay (через приложение СберБанк Онлайн)</li>
-                  <li>• T-Pay (через приложение Тинькофф)</li>
+                  <li>• Банковских карт Visa, Mastercard, МИР;</li>
+                  <li>• Системы быстрых платежей (СБП);</li>
+                  <li>• SberPay;</li>
+                  <li>• T-Pay.</li>
                 </ul>
-                
-                <p className="text-sm mb-3">
-                  <strong>Обработка платежей:</strong> ЮKassa
-                </p>
 
-                <div className="bg-amber-500/10 border border-amber-500/20 rounded-lg p-4 mb-4">
-                  <p className="font-medium text-sm mb-2">Возврат средств:</p>
+                <div className="mb-4">
+                  <p className="font-medium text-sm mb-2">4.2. Условия возврата денежных средств:</p>
                   <ul className="text-sm space-y-1">
-                    <li>• <strong>В течение 14 дней</strong> — полный возврат, если вы не использовали Premium-функции</li>
-                    <li>• <strong>После 14 дней</strong> — возврат по усмотрению ИП (рассматривается индивидуально в течение 10 рабочих дней)</li>
-                    <li>• <strong>Без возврата</strong> — если Premium-функции были использованы (AI-чат, словари созданы)</li>
+                    <li>• 4.2.1. Пользователь вправе отказаться от исполнения договора в любое время в соответствии со ст. 32 Закона РФ «О защите прав потребителей» и ст. 782 ГК РФ.</li>
+                    <li>• 4.2.2. В течение 14 календарных дней: возврат пропорционально оставшемуся периоду, за вычетом фактически понесенных расходов, если Premium-функции не использованы в значительном объеме.</li>
+                    <li>• Значительный объем: более 10 сообщений в AI-чате или более 5 пользовательских словарей.</li>
+                    <li>• По истечении 14 дней: возврат по письменному заявлению в индивидуальном порядке (до 10 рабочих дней).</li>
+                    <li>• 4.2.3. Пункт не ограничивает право Пользователя на отказ от услуги в течение оплаченного периода.</li>
                   </ul>
                 </div>
 
                 <p className="text-sm">
-                  <strong>Для оформления возврата:</strong> напишите на{' '}
+                  4.3. Для оформления возврата необходимо направить запрос на{' '}
                   <a href="mailto:support@smart-word.ru" className="text-primary hover:underline">
                     support@smart-word.ru
-                  </a>{' '}
-                  с указанием email аккаунта и причины возврата.
-                </p>
-                <p className="text-sm mt-2">
-                  Срок рассмотрения заявки: до 10 рабочих дней.
+                  </a>
+                  {' '}с указанием адреса электронной почты, привязанного к аккаунту, и причины
+                  обращения. Срок рассмотрения — до 10 рабочих дней.
                 </p>
               </>
             }
           />
 
-          {/* 5. ИИ-функции */}
+          {/* 5. Использование функций ИИ */}
           <Section
-            title="5. ИИ-функции"
+            title="5. Использование функций искусственного интеллекта (ИИ)"
             content={
               <>
-                <div className="bg-amber-500/10 border border-amber-500/20 rounded-lg p-4 mb-4">
+                <p className="text-sm mb-3">
+                  5.1. Приложение использует технологии ИИ. Исполнитель не несет ответственности за смысловое содержание, точность или
+                  актуальность информации, сгенерированной ИИ.
+                </p>
+                <div className="mb-4">
                   <p className="text-sm">
-                    <strong>Важно:</strong> ИИ может генерировать неточную информацию.
-                    Не полагайтесь на ИИ-ответы в вопросах, требующих профессиональной экспертизы
-                    (медицина, юриспруденция, финансы).
+                    <strong>5.2. Предупреждение:</strong> Функции ИИ не предназначены для
+                    использования в критически важных сферах (медицина, юриспруденция, финансовые
+                    консультации). Любые решения на основе таких данных принимаются Пользователем
+                    на свой риск.
                   </p>
                 </div>
-                <p className="text-sm">
-                  Для работы AI-чата ваши запросы передаются провайдеру <strong>Qwen (Китай)</strong>.
-                  Вы даёте согласие на трансграничную передачу данных при регистрации.
-                </p>
               </>
             }
           />
@@ -170,70 +208,106 @@ export default function TermsPage() {
           <Section
             title="6. Персональные данные"
             content={
-              <p className="text-sm">
-                Акцептуя Оферту, вы даёте согласие на обработку персональных данных в соответствии с{" "}
-                <a href="/privacy" className="text-primary hover:underline">Политикой конфиденциальности</a>.
-              </p>
+              <>
+                <p className="text-sm">
+                  6.1. Обработка персональных данных Пользователя осуществляется в строгом
+                  соответствии с{" "}
+                  <a href="/privacy" className="text-primary hover:underline">
+                    Политикой конфиденциальности
+                  </a>
+                  , размещенной в Приложении, и Федеральным законом № 152-ФЗ «О персональных
+                  данных».
+                </p>
+                <p className="text-sm mt-3">
+                  6.2. Акцепт настоящей Оферты подтверждает ознакомление Пользователя с Политикой
+                  конфиденциальности.
+                </p>
+              </>
             }
           />
 
           {/* 7. Ответственность */}
           <Section
-            title="7. Ответственность"
+            title="7. Ответственность сторон"
             content={
-              <div className="space-y-3">
+              <div className="space-y-3 text-sm">
+                <p>
+                  7.1. Исполнитель не несет ответственности за:
+                </p>
                 <div className="bg-card border border-border rounded-lg p-3">
-                  <p className="font-medium text-sm mb-2">Мы не несём ответственности за:</p>
+                  <p className="font-medium text-sm mb-2">Ограничения ответственности:</p>
                   <ul className="text-sm space-y-1">
-                    <li>• Неточность ИИ-ответов</li>
-                    <li>• Действия третьих лиц (провайдеры ИИ, платёжные системы)</li>
+                    <li>• Технические перебои в работе Приложения, вызванные действиями хостинг-провайдеров или сбоями в сети Интернет;</li>
+                    <li>• Неточность или неполноту данных, сгенерированных модулем ИИ.</li>
                   </ul>
                 </div>
                 <div className="bg-card border border-border rounded-lg p-3">
-                  <p className="font-medium text-sm mb-2">Вы несёте ответственность за:</p>
+                  <p className="font-medium text-sm mb-2">Ответственность сторон:</p>
                   <ul className="text-sm space-y-1">
-                    <li>• Достоверность информации</li>
-                    <li>• Сохранность учётных данных</li>
+                    <li>• 7.2. Исполнитель несет ответственность перед Пользователем за надлежащее оказание оплаченных услуг.</li>
+                    <li>• 7.2. Исполнитель вправе предъявить регрессные требования к третьим лицам, если нарушение возникло по их вине.</li>
+                    <li>• 7.3. Пользователь несет ответственность за сохранность учетных данных (логин/пароль).</li>
+                    <li>• 7.3. Пользователь несет ответственность за достоверность информации, предоставляемой при регистрации.</li>
                   </ul>
                 </div>
               </div>
             }
           />
 
-          {/* 8. Изменение оферты */}
+          {/* 8. Изменение условий оферты */}
           <Section
-            title="8. Изменение оферты"
+            title="8. Изменение условий оферты"
             content={
-              <p className="text-sm">
-                Мы вправе изменять Оферту в одностороннем порядке. Изменения вступают в силу через 
-                <strong> 5 дней</strong> после публикации в приложении.
-              </p>
+              <>
+                <p className="text-sm">
+                  8.1. Исполнитель вправе в одностороннем порядке вносить изменения в текст
+                  настоящей Оферты.
+                </p>
+                <p className="text-sm mt-3">
+                  8.2. Новая редакция Оферты вступает в силу с момента ее публикации в Приложении.
+                </p>
+                <p className="text-sm mt-3">
+                  8.3. Существенное условие для подписчиков Premium: изменения, ухудшающие положение
+                  Пользователя (например, сокращение перечня Premium-функций или увеличение стоимости),
+                  не применяются к ранее оплаченным и действующим периодам подписки. Такие изменения
+                  вступают в силу только после окончания текущего оплаченного периода Пользователя.
+                </p>
+              </>
             }
           />
 
-          {/* 9. Контакты и реквизиты */}
+          {/* 9. Заключительные положения и реквизиты */}
           <Section
-            title="9. Контакты и реквизиты"
+            title="9. Заключительные положения и реквизиты"
             content={
               <div className="space-y-4">
+                <p className="text-sm">
+                  9.1. Все споры решаются путем переговоров. При недостижении согласия спор
+                  передается в суд по месту нахождения Исполнителя в соответствии с действующим
+                  законодательством РФ.
+                </p>
                 <ContactItem
                   icon={Mail}
                   label="Email для запросов"
                   value="support@smart-word.ru"
                   href={`mailto:support@smart-word.ru`}
                 />
-                <div className="bg-card border border-border rounded-lg p-4 text-sm space-y-2">
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">ФИО</span>
-                    <span className="font-medium">ИП Сейитмаммедов Давут Гелдимырадович</span>
+                <div className="bg-card border border-border rounded-lg p-4 text-sm space-y-3">
+                  <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
+                    <span className="text-muted-foreground shrink-0">Статус</span>
+                    <span className="font-medium wrap-break-word sm:text-right">Индивидуальный предприниматель</span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">ИНН</span>
-                    <span className="font-medium">236600208052</span>
+                  <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
+                    <span className="text-muted-foreground shrink-0">ФИО</span>
+                    <span className="font-medium wrap-break-word sm:text-right">ИП Сейитмаммедов Давут Гелдимырадович</span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">ОГРНИП</span>
-                    <span className="font-medium">326237500121501</span>
+                  <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
+                    <span className="text-muted-foreground shrink-0">ИНН</span>
+                    <span className="font-medium wrap-break-word sm:text-right">236600208052</span>
+                  </div>
+                  <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
+                    <span className="text-muted-foreground shrink-0">ОГРНИП</span>
+                    <span className="font-medium wrap-break-word sm:text-right">326237500121501</span>
                   </div>
                 </div>
               </div>
