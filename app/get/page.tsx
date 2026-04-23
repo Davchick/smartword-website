@@ -24,7 +24,7 @@ const stores = {
   rustore: {
     name: "RuStore",
     icon: "/rustore.svg",
-    url: "https://apps.rustore.ru/app/com.smartword",
+    url: "https://www.rustore.ru/catalog/app/ru.smartword.app",
     description: "Скачать из RuStore",
   },
 }

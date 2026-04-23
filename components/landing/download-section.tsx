@@ -21,7 +21,7 @@ const stores = [
     name: "RuStore",
     subtitle: "Скачать из",
     icon: "/rustore.svg",
-    href: "#",
+    href: "https://www.rustore.ru/catalog/app/ru.smartword.app",
   },
 ]
 
