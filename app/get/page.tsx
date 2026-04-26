@@ -9,18 +9,18 @@ import Image from "next/image"
 type Platform = "ios" | "android" | "rustore" | "unknown"
 
 const stores = {
-  ios: {
-    name: "App Store",
-    icon: "/apple.svg",
-    url: "https://apps.apple.com/app/smartword",
-    description: "Загрузить в App Store",
-  },
-  android: {
-    name: "Google Play",
-    icon: "/googleplay.svg",
-    url: "https://play.google.com/store/apps/details?id=com.smartword",
-    description: "Доступно в Google Play",
-  },
+  // ios: {
+  //   name: "App Store",
+  //   icon: "/apple.svg",
+  //   url: "https://apps.apple.com/app/smartword",
+  //   description: "Загрузить в App Store",
+  // },
+  // android: {
+  //   name: "Google Play",
+  //   icon: "/googleplay.svg",
+  //   url: "https://play.google.com/store/apps/details?id=com.smartword",
+  //   description: "Доступно в Google Play",
+  // },
   rustore: {
     name: "RuStore",
     icon: "/rustore.svg",
